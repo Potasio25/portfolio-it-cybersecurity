@@ -36,10 +36,10 @@ Posteriormente, mediante la instrucción shell, se obtuvo acceso directo a la co
 * whoami
 El servidor objetivo retornó como identidad el usuario root, confirmando el compromiso absoluto del host y el control total de sus recursos informáticos.
 
+---
+
 ## 5. Diagnóstico de Incidentes y Remediación Técnica
 Durante la fase de mitigación en el servidor afectado (Metasploitable 2), se procedió a realizar un diagnóstico técnico para deshabilitar el servicio de manera persistente. En este proceso se evaluaron distintas metodologías de administración local del sistema:
-
----
 
 ![Gestión de scripts](comando_cerrar_ftp.PNG)
 
