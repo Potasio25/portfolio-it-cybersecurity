@@ -42,6 +42,7 @@ Durante la fase de mitigación en el servidor afectado (Metasploitable 2), se pr
 ---
 
 ![Gestión de scripts](comando_cerrar_ftp.PNG)
+
 Gestión de Init Scripts: Comandos genéricos de control como sudo service vsftpd stop o llamadas directas al directorio /etc/init.d/vsftpd stop arrojaron fallos de comando no encontrado (command not found), evidenciando la falta de scripts de servicio locales estándar para esta aplicación de manera independiente.
 
 Terminación Forzada de Procesos: El comando sudo killall vsftpd retornó como respuesta que no existía ningún proceso activo (no process killed). Esto determinó que el demonio de vsftpd no opera bajo un esquema continuo en segundo plano, sino que es levantado dinámicamente a través de un súper-servidor de internet (inetd / xinetd) al recibir conexiones en el puerto de escucha.
